@@ -1,104 +1,67 @@
-# 心儀房屋
-## 專案簡介
-收錄房屋資訊的SPA網站，使用者可以發送諮詢表單、進行諮詢表單查詢、也可以將案件加入案互相比較或是將案件收藏以便後續查看。
-使用 Vue 3 與 Vite 獨立開發具備「房產展示前台」與「內容管理後台 (CMS)」的 SPA 應用程式。
+# 心儀房屋 (found_houses) — 房產資訊 SPA 平台
 
-技術點： 實作 管理者權限驗證 (Auth) 與 RESTful API 串接，並利用 Vue Router 建立巢狀路由與導航守衛 (Navigation Guards)，確保後台資料存取的安全性。
+[![Vue Version](https://img.shields.io/badge/Vue-3.x-4fc08d?style=flat-square&logo=vuedotjs)](https://vuejs.org/)
+[![Vite Version](https://img.shields.io/badge/Vite-Latest-646cff?style=flat-square&logo=vite)](https://vitejs.dev/)
 
-1. 第三方 API 深度整合與資料流自動化 (Google Maps / Sheets)
-描述： 整合 Google Maps API 實作動態地圖案件標記，並透過 axios 串接 Google Sheets 實現諮詢表單的自動化收集。
+> **專案簡介：** > 一款整合「前台展示」與「後台內容管理 (CMS)」的房產資訊系統。透過 Vue 3 的 Composition API 實現高複用性邏輯，並深度整合 Google Maps 與 Google Sheets，打造流暢的自動化業務流程。
 
-技術點： 處理非同步資料加載邏輯，優化地圖渲染效能，並解決跨網域與資料格式標準化的挑戰，顯著提升營運效率。
+**🔗 [Demo 連結](https://tincanblack.github.io/found_houses/#/)**
 
-2. 高複用性組件開發與前端狀態管理 (Mitt / Composition API)
-描述： 採用 Composition API 封裝高複用性組件（如：輪播圖、篩選器、彈窗模組），並使用 Mitt (Event Bus) 處理複雜的跨組件通訊。
+---
 
-技術點： 建立統一的程式碼規範（ESLint / Prettier），透過組件化思維降低系統耦合度，提升後續開發與維護效率達 30%。
+## 🛠 技術亮點 (Technical Highlights)
 
-3. 資料視覺化與互動體驗優化 (Google Charts / Swiper / CKEditor)
-描述： 整合 Google Charts 進行後台資料統計分析，並使用 CKEditor 5 打造流暢的文章管理介面。
+### 1. 異質系統整合與資料流自動化
+* **Google Maps API：** 實作動態案件座標標記與互動式地圖呈現，提升房產尋找的視覺體驗。
+* **Google Sheets 整合：** 透過 `axios` 串接 API，將諮詢表單資料即時寫入 Google Sheets，實現無後端伺服器（Serverless）的資料自動化採集。
+* **非同步處理：** 優化非同步資料加載邏輯，解決跨網域數據標準化挑戰。
 
-技術點： 優化 RWD 響應式設計，確保在不同行動裝置上的互動流暢度，並透過 Vee-validate 實作嚴密的表單驗證機制，降低無效資料率。
+### 2. 進階架構與狀態管理
+* **Vue Router 導航守衛：** 實作嚴密的管理者驗證（Auth）機制與巢狀路由設計，保障後台資料安全性。
+* **Mitt 跨元件通訊：** 利用 Event Bus 模式解決複雜元件間的資料傳遞，降低系統耦合度。
+* **Composition API 封裝：** 抽離重複業務邏輯（如：篩選器、彈窗、表單驗證），大幅提升開發效率。
 
-### Demo
-https://tincanblack.github.io/found_houses/#/
+### 3. 使用者體驗與視覺化
+* **Google Charts：** 實作後台數據統計看板，將房產諮詢狀況視覺化。
+* **響應式設計 (RWD)：** 整合 Bootstrap 5 與 Swiper 打造多端相容的流暢體驗。
+* **嚴謹表單驗證：** 應用 Vee-validate 實作攔截機制，確保進入後台的資料準確性。
 
-## 主要功能
+---
 
-### 前台
-- 案件展示、分類展示、單一商品介紹、隨機商品展示
-- 案件的收藏與比較
-- 寄送諮詢表單一併到 Google Sheets 留查
-- 串接 Google Map API 顯示案件位置
-- 諮詢狀態查詢
+## 🚀 主要功能 (Key Features)
 
-### 後台
-- 管理者登入 / 登出、驗證登入狀態
-- 後台相關管理(CRUD)
-  - 案件管理
-  - 文章管理
-  - 諮詢表單管理
-- 提供資料排序
+### 👤 前台功能
+- **智慧搜索：** 支援案件分類展示與多條件篩選。
+- **互動工具：** 案件收藏與加入比較清單功能。
+- **諮詢系統：** 線上發送諮詢表單並串接地圖位置顯示。
 
-## 使用技術 / 套件
-| 技術        | 簡述                       |
-| ---------------- | -------------------------- |
-| Vite        | 以 Vue.js 開發 SPA 網站    |
-| VueRouter        | 以 Vue.js 開發 SPA 網站、路由設計  |
-| VueComponents    | 將重複使用的模組整理為元件 | 
-| ESlint(Standard) | 優化程式碼品質、維持風格統一 |
-| Bootstrap 5      | 開發 UI 介面  |
+### ⚙️ 後台管理 (CMS)
+- **登入驗證：** 完整的管理者驗證與狀態維持。
+- **CRUD 管理：** 案件、文章、諮詢表單之完整管理功能。
+- **統計分析：** 提供資料排序、分頁處理與數據報表呈現。
 
+---
 
+## 🧱 技術棧 (Tech Stack)
 
-| 套件             | 簡述                   |
-| ---------------- | --------------------- |
-| Vue-axios| 串接 API   |
-| Vee-validate| 表單驗證 |
-| Vue-good-table| 資料排序 |
-| momentjs |統一時間格式 |
-| Swiper| 首頁、單一案件、相關案件、輪播 | 
-| google-charts | 資料視覺化 |
-| Ckeditor5| 編輯文章內容介面 |
-| Mitt| 跨元件傳遞資料 |
+| 類別 | 使用技術 / 工具 |
+| :--- | :--- |
+| **核心框架** | Vue 3, Vite, Vue Router |
+| **套件工具** | Axios, Mitt, Moment.js, Vee-validate |
+| **UI / 視覺化** | Bootstrap 5, Swiper, CKEditor 5, Google Charts |
+| **外部 API** | Google Maps API, Hexschool Vue API |
+| **品質規範** | ESLint (Standard), Prettier, EditorConfig |
 
-## 如何執行專案
+---
 
-將下載專案 Zip 檔或將專案 Clone 至本地端
-### 安裝專案 dependencies
-```
+## 💻 執行專案
+
+```bash
+# 安裝依賴
 npm install
-```
 
-### 編譯及執行專案（Development 模式）
-```
+# 啟動開發伺服器
 npm run dev
-```
 
-### 編譯及壓縮（Production 模式）
-```
+# 編譯及壓縮 (Production)
 npm run build
-```
-
-### 分析程式碼除錯
-```
-npm run lint
-```
-
-### 客製相關設定
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## 使用、參考來源
-
-### API 提供
-
-[hexshool-vue3-course-api](https://github.com/hexschool/vue3-course-api-wiki/wiki)
-
-### 圖片來源
-
-Unsplash、iconfinder、Bootstrap icon、fortawesome pro
-
-### 版型設計樣式參考
-
-各大房屋資訊網站
