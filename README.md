@@ -3,7 +3,7 @@
 [![Vue Version](https://img.shields.io/badge/Vue-3.x-4fc08d?style=flat-square&logo=vuedotjs)](https://vuejs.org/)
 [![Vite Version](https://img.shields.io/badge/Vite-Latest-646cff?style=flat-square&logo=vite)](https://vitejs.dev/)
 
-> **專案簡介：** > 一款整合「前台展示」與「後台內容管理 (CMS)」的房產資訊系統。透過 Vue 3 的 Composition API 實現高複用性邏輯，並深度整合 Google Maps 與 Google Sheets，打造流暢的自動化業務流程。
+**專案簡介：** 一款整合「前台展示」與「後台內容管理 (CMS)」的房產資訊系統。透過 Vue 3 的 Composition API 實現高複用性邏輯，並深度整合 Google Maps 與 Google Sheets，打造流暢的自動化業務流程。
 
 **🔗 [Demo 連結](https://tincanblack.github.io/found_houses/#/)**
 
