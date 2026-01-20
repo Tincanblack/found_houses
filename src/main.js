@@ -4,16 +4,12 @@ import { createPinia } from "pinia";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// fortawesome
-import "@fortawesome/fontawesome-pro/css/all.min.css";
+//
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // axios
 import axios from "axios";
 import VueAxios from "vue-axios";
-
-// vue-good-table
-import VueGoodTablePlugin from "vue-good-table-next";
-import "vue-good-table-next/dist/vue-good-table-next.css";
 
 // CKEditor
 import CKEditor from "@ckeditor/ckeditor5-vue";
@@ -90,7 +86,7 @@ app.use(VueGoogleMaps, {
 	},
 	installComponents: true,
 });
-app.use(VueGoodTablePlugin);
+
 app.component("LoadingComponent", Loading);
 app.component("VForm", Form);
 app.component("VField", Field);

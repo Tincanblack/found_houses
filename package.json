@@ -12,7 +12,7 @@
     "@ckeditor/ckeditor5-horizontal-line": "^34.1.0",
     "@ckeditor/ckeditor5-vue": "^4.0.1",
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "@fortawesome/fontawesome-pro": "^6.2.0",
+    "@googlemaps/js-api-loader": "^2.0.2",
     "@popperjs/core": "^2.11.2",
     "@vee-validate/i18n": "^4.6.10",
     "@vee-validate/rules": "^4.6.10",
